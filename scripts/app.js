@@ -44,7 +44,14 @@ const updateUI = (data) => {
     `;
 
     displayFc.appendChild(box);
+
+    setTimeout(()=>{
+      box.innerHTML = '';
+      box.classList.remove('box')
+    }, 6000)
+    
   });
+  
 
   // update details template
   details.innerHTML = `
@@ -82,12 +89,18 @@ const updateCity = async (city) => {
 
 
 cityForm.addEventListener("submit", (e) => {
+
   // prevent default action
   e.preventDefault();
 
+
   // get city value
   const city = cityForm.city.value.trim();
+
+
   cityForm.reset();
+
+  
 
   // update the ui with new city
   updateCity(city)
