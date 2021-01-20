@@ -48,7 +48,7 @@ const updateUI = (data) => {
     setTimeout(()=>{
       box.innerHTML = '';
       box.classList.remove('box')
-    }, 6000)
+    }, 1 * 60 * 1000)
     
   });
   
